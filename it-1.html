@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-TDBME1CZ9L"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-TDBME1CZ9L');
+</script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog - hailrain</title>
+    <meta name="google-site-verification" content="rn7Tpz7rbqF5Ss3qku9sWvLyaueNYLF-QRe_06ZCNz8" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <link rel="stylesheet" href="app.css">
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+      
+
+</head>
+
+<body>
+    <div class="container flex flex-dir-col">
+    <header class="logo-bar con-min-width">
+        <div class="logo-box con flex flex-jc-c">
+            <a href="index.html" class="logo"><i class="fab fa-jenkins"></i>
+                DEVELOPERS</a>            
+        </div>
+    </header>
+
+    <header class="con-min-width menu-bar">
+    <div class="menu-box con">
+        <ul class="flex flex-jc-s-ar">
+            <li class="flex flex-grow-1"><a href="index.html" class="flex-grow-1"><i class="fas fa-home"></i>HOME</a></li>
+            <li class="flex flex-grow-1">
+                <a href="" class="flex-grow-1"><i class="fas fa-list"></i>BOARD</a>
+                <ul>
+                    <li><a href="it-list-1.html"><i class="far fa-clipboard"></i><span>IT게시판</span></a></li>
+                </ul>
+            </li>
+            <li class="flex flex-grow-1"><a href="" class="flex-grow-1"><i class="fas fa-link"></i>SNS</a>
+                <ul>
+                    <li><a href="https://cdbitmana.tistory.com/" target="_blank"><i class="fab fa-blogger-b"></i></i>블로그</a></li>
+                    <li><a href="https://github.com/cdbitmana/" target="_blank"><i class="fab fa-github"></i></i>GITHUB</a></li>
+                </ul>
+            </li>
+            <li class="flex flex-grow-1"><a href="statindex.html" class="flex-grow-1"><i class="fas fa-chart-pie"></i>STATISTICS</a>
+            </li>
+        </ul>
+    </div>
+</header><main class="flex flex-grow-1 flex-dir-col con-min-width">
+
+
+    <section class="article con flex flex-dir-col">
+        <div class="article__title-bar flex flex-jc-s-bet flex-ai-c">
+            <div class="article_id flex-basis-50px">1</div>
+            <div class="article_title flex-grow-1">자바) Switch 구문</div>
+            <div class="article_writer flex-basis-100px"><i class="fas fa-user"></i>이명학
+            </div>
+            <div class="article_regDate flex-basis-200px"><i class="fas fa-clock"></i>2020-12-17 13:28:21
+            </div>
+            <div class="article_hit flex-basis-50px"><i class="fas fa-eye"></i>0</div>
+            <div class="article_recommend flex-basis-50px"><i
+                    class="fas fa-thumbs-up"></i>0</div>
+        </div>
+        <div id="viewer" class="article_body flex-grow-1"># SWITCH
+```java
+switch (변수명) {
+          case 조건1:
+          실행코드1;
+
+          case 조건2:
+          실행코드2;
+
+          default:
+          실행코드3;
+}
+```
+
+변수가 
+조건1에 참이라면 실행코드1부터 실행코드3까지 순차적으로 실행
+조건2에 참이라면 실행코드2부터 실행코드3까지 순차적으로 실행
+조건 1과 조건2에 모두 맞지 않으면 실행코드3만 실행
+
+
+조건에 맞는 실행코드만 실행하고 싶다면 break; 를 넣어준다.
+# 예시
+```java
+int value = 1;
+
+switch (value) {
+          case 1 :
+          System.out.println("1");
+          break;
+
+          case 2 :
+          System.out.println("2");
+          break;
+
+          case 3 :
+          System.out.println("3");
+          break;
+
+         default :
+         System.out.println("그 외의 숫자");
+}
+```
+</div>
+
+        <div id="disqus_thread"></div>
+        <script>
+            (function () { // DON'T EDIT BELOW THIS LINE
+                var d = document, s = d.createElement('script');
+                s.src = 'https://blogssg.disqus.com/embed.js';
+                s.setAttribute('data-timestamp', +new Date());
+                (d.head || d.body).appendChild(s);
+            })();
+        </script>
+        <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by
+                Disqus.</a></noscript>
+
+        <div class="con-min-width article-move-button">
+            <div class="con next-article"><a href="it-2.html">다음글</a></div>
+
+        </div>
+    </section>
+
+    <section class="con article-list">
+        <section class="title-bar con-min-width">
+            <h1 class="title-bar__title-box con flex flex-jc-c"><i class="far fa-clipboard"></i><span>IT 게시판</span></h1>
+        </section>
+        <section class="board-list con-min-width">
+            <table class="con">
+                <tr class="tag">
+                    <td class="font-bold cell-id">번호</td>
+                    <td class="font-bold cell-title">제목</td>
+                    <td class="font-bold cell-writer">작성자</td>
+                    <td class="font-bold cell-regDate">작성일</td>
+                    <td class="font-bold cell-hit">조회 수</td>
+                    <td class="font-bold cell-recommend">추천 수</td>
+                </tr>
+                <tr>
+                    <td colspan="6" class="line-separate"></td>
+                </tr>
+                <tr><td colspan="6" class ="line-separate"></td></tr><tr><td class="cell-id">2</td><td class="cell-title"><a href="it-2.html">자바) 배열 정렬하는 식</td><td class="cell-writer">이명학</td><td class="cell-regDate">2020-12-17 15:25:02</td><td class="cell-hit">0</td><td class="cell-recommend">0</td></tr><tr><td colspan="6" class ="line-separate"></td></tr><tr><td class="cell-id"> &gt; </td><td class="cell-title"><a href="it-1.html">자바) Switch 구문</td><td class="cell-writer">이명학</td><td class="cell-regDate">2020-12-17 13:28:21</td><td class="cell-hit">0</td><td class="cell-recommend">0</td></tr>
+            </table>
+        </section>
+        <section class="page-button con-min-width">
+
+            <div class="con flex flex-ai-c flex-jc-s-bet">
+                <div class="flex flex-basis-100px">
+                    
+                    
+
+                </div>
+                <ul class="flex flex-jc-c flex-ai-e flex-grow-1">
+                    <li class="flex flex-jc-c flex-basis-50px"><span>1</span></li>
+                </ul>
+                <div class="flex flex-basis-100px">
+                    
+                    
+                </div>
+            </div>
+
+        </section>
+    </section>
+
+
+</main><footer class="bottom-logo-bar con-min-width">
+    <div class="con flex height-100p">
+        <a href="" class="logo flex">
+            <i class="fab fa-jenkins"></i>
+            <span>DEVELOPERS</span>
+        </a>
+        <div class="copyright-box flex flex-ai-c">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos est et sequi sint exercitationem quibusdam
+            ratione. Architecto facere est eius labore autem, fugiat rem dolor, perferendis, cum sapiente veritatis
+            libero.
+        </div>
+    </div>
+
+</footer>
+</div>
+
+<!-- 하이라이트 라이브러리 추가, 토스트 UI 에디터에서 사용됨 -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.4.1/highlight.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.4.1/styles/default.min.css">
+<!-- 토스트 UI 에디터, 자바스크립트 코어 -->
+<script src="https://uicdn.toast.com/editor/latest/toastui-editor-all.min.js"></script>
+<!-- 코드 미러 라이브러리 추가, 토스트 UI 에디터에서 사용됨 -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.58.3/codemirror.min.css" />
+<!-- 토스트 UI 에디터, CSS 코어 -->
+<link rel="stylesheet" href="https://uicdn.toast.com/editor/latest/toastui-editor.min.css" />
+<!-- 토스트 UI 에디터, 신택스 하이라이트 플러그인 추가 -->
+<script
+    src="https://uicdn.toast.com/editor-plugin-code-syntax-highlight/latest/toastui-editor-plugin-code-syntax-highlight.min.js"></script>
+    <script id="dsq-count-scr" src="//blogssg.disqus.com/count.js" async></script>
+<script src="common.js"></script>
+
+</body>
+
+</html>
