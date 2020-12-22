@@ -113,7 +113,16 @@ CONCAT('문','자','열')
 ```
 -> '문자열'
 
-</div>
+CONCAT 으로 합치려는 텍스트 중에 null 이 있다면 합친 값도 null이 된다.
+
+# CONCAT_WS
+```mysql
+CONCAT_WS(',','문','자','열')
+```
+-> '문,자,열'
+
+CONCAT_WS의 첫번째 인자는 구분값이다.
+CONCAT_WS의 인자값에 null이 있다면 null을 빼고 반환한다.</div>
 
         <div id="disqus_thread"></div>
         <script>
