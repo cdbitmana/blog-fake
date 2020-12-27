@@ -788,8 +788,16 @@
         margin-bottom:15px;
     }
     .content-1  .profile_text > .profile_arrow {
+        position:relative;
         margin-left:120px;
         cursor:pointer;
+    }
+    .profile_text > .profile_arrow > .extend {
+        position:absolute;
+        top:120%;
+        left:0;
+        font-size:1rem;
+        
     }
       .profile_detail {   
         overflow: hidden;     
