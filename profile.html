@@ -3,15 +3,14 @@
 
 <head>
     <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-TDBME1CZ9L"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-TDBME1CZ9L"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
 
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
-        gtag('js', new Date());
-
-        gtag('config', 'G-TDBME1CZ9L');
-    </script>
+  gtag('config', 'G-TDBME1CZ9L');
+</script>
     <!-- 메타태그정보 //-->
     <!-- META -->
     <link rel="canonical" href="https://blog.hailrain.site" />
@@ -19,8 +18,8 @@
     <meta name="title" content="DLOG" />
     <meta name="keywords" content="HTML, CSS, JAVASCRIPT, JAVA, SPRING, MySQL, 리눅스, 리액트" />
     <meta name="copyright" content="DLOG" />
-    <meta name="pubdate" content="2021-01-01T11:33:18" />
-    <meta name="lastmod" content="2021-01-01T11:33:18" />
+    <meta name="pubdate" content="2021-01-05T22:19:52" />
+    <meta name="lastmod" content="2021-01-05T22:19:52" />
     <!-- OPENGRAPH -->
     <meta property="og:site_name" content="DLOG" />
     <meta property="og:type" content="website" />
@@ -31,8 +30,8 @@
     <meta property="og:image:alt" content="blog.hailrain.site" />
     <meta property="og:image:width" content="486" />
     <meta property="og:image:height" content="254" />
-    <meta property="og:updated_time" content="2021-01-01T11:33:18" />
-    <meta property="og:pubdate" content="2021-01-01T11:33:18" />
+    <meta property="og:updated_time" content="2021-01-05T22:19:52" />
+    <meta property="og:pubdate" content="2021-01-05T22:19:52" />
     <meta property="og:url" content="https://blog.hailrain.site" />
     <!-- TWITTER -->
     <meta name="twitter:card" content="summary_large_image" />
@@ -139,11 +138,14 @@
 
         <div class="content-1__wrapper">
         <div class="profile_text">
-            <p>2020</p>
-            <span>PROFILE</span>
-            <span class="profile_arrow"><i class="fas fa-arrow-right"></i>
+            <p>2020</p>            
+            <div class="flex profile_short">
+                <span>PROFILE</span>
+            <span class="flex flex-dir-col profile_arrow profile_arrow_extend"><i class="fas fa-arrow-right"></i>
                 <span class="extend">펼치기</span></span>
-            
+                <span class="flex flex-dir-col profile_arrow profile_arrow_shorten"><i class="fas fa-arrow-left"></i>
+                    <span class="extend">접기</span></span>
+                </div>
             <p>안녕하세요. 반갑습니다!</p>
             <p>이명학입니다.</p>
 
@@ -160,7 +162,7 @@
                     </ul>
                     <ul>
                         <li>이명학</li>
-                        <li>1993.02.18 (만 27세)</li>
+                        <li>1993.02.18 (만 28세)</li>
                         <li>010-6710-8114</li>
                         <li>cdbitmana@gmail.com</li>
                         <li>대전광역시 서구</li>
