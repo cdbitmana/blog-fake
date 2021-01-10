@@ -14,7 +14,7 @@
     <!-- 메타태그정보 //-->
     <!-- META -->
     <link rel="canonical" href="https://blog.hailrain.site" />
-    <meta name="subject" content="MySQL) 문자열 합치기 CONCAT" />
+    <meta name="subject" content="Vue) Array.prototype.map()" />
     <meta name="title" content="DLOG" />
     <meta name="keywords" content="HTML, CSS, JAVASCRIPT, JAVA, SPRING, MySQL, 리눅스, 리액트" />
     <meta name="copyright" content="DLOG" />
@@ -23,12 +23,20 @@
     <!-- OPENGRAPH -->
     <meta property="og:site_name" content="DLOG" />
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="MySQL) 문자열 합치기 CONCAT" />
-    <meta property="og:description" content=" CONCAT
-MySql
-CONCAT문자열
+    <meta property="og:title" content="Vue) Array.prototype.map()" />
+    <meta property="og:description" content="map 메소드는 배열 내의 모든 요소 각각에 대하여 주어진 함수를 호출한 결과를 모아 새로운 배열을 반환합니다
 
- 문자열
+javascript
+arraymapfunctionrowindex 
+  return row  2
+
+ row 는 처리할 요소  index 는 처리할 현재 요소의 인덱스
+
+ map 메소드는 다음과 같이 사용할 수도 있다
+arraymaprowindex   
+   return row  2
+
+
 
 " />
     <meta property="og:locale" content="ko_KR" />
@@ -41,30 +49,46 @@ CONCAT문자열
     <meta property="og:url" content="https://blog.hailrain.site" />
     <!-- TWITTER -->
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="MySQL) 문자열 합치기 CONCAT" />
+    <meta name="twitter:title" content="Vue) Array.prototype.map()" />
     <meta name="twitter:site" content="@DLOG" />
     <meta name="twitter:creator" content="@DLOG" />
     <meta name="twitter:image" content="logoimage/logo.png">
-    <meta name="twitter:description" content=" CONCAT
-MySql
-CONCAT문자열
+    <meta name="twitter:description" content="map 메소드는 배열 내의 모든 요소 각각에 대하여 주어진 함수를 호출한 결과를 모아 새로운 배열을 반환합니다
 
- 문자열
+javascript
+arraymapfunctionrowindex 
+  return row  2
+
+ row 는 처리할 요소  index 는 처리할 현재 요소의 인덱스
+
+ map 메소드는 다음과 같이 사용할 수도 있다
+arraymaprowindex   
+   return row  2
+
+
 
 " />
     <!-- GOOGLE+ -->
     <meta itemprop="headline" content="DLOG" />
     <meta itemprop="name" content="DLOG" />
-    <meta itemprop="description" content=" CONCAT
-MySql
-CONCAT문자열
+    <meta itemprop="description" content="map 메소드는 배열 내의 모든 요소 각각에 대하여 주어진 함수를 호출한 결과를 모아 새로운 배열을 반환합니다
 
- 문자열
+javascript
+arraymapfunctionrowindex 
+  return row  2
+
+ row 는 처리할 요소  index 는 처리할 현재 요소의 인덱스
+
+ map 메소드는 다음과 같이 사용할 수도 있다
+arraymaprowindex   
+   return row  2
+
+
 
 " />
     <meta itemprop="image" content="/logoimage/logo.png" />
 
-    <title>MySQL) 문자열 합치기 CONCAT | DLOG | ARTICLE DETAIL</title>
+    <title>Vue) Array.prototype.map() | DLOG | ARTICLE DETAIL</title>
     
     
     <script data-ad-client="ca-pub-1940074004342489" async
@@ -180,11 +204,11 @@ href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.48.4/codemirror.min.cs
 
     <section class="article main-con flex flex-dir-col">
         <div class="article__title-bar flex flex-jc-s-bet flex-ai-c">
-            <div class="article_id flex-basis-50px">3</div>
-            <div class="article_title flex-grow-1">MySQL) 문자열 합치기 CONCAT</div>
+            <div class="article_id flex-basis-50px">14</div>
+            <div class="article_title flex-grow-1">Vue) Array.prototype.map()</div>
             <div class="article_writer flex-basis-100px"><i class="fas fa-user"></i>이명학
             </div>
-            <div class="article_regDate flex-basis-200px"><i class="fas fa-clock"></i>2020-12-17 15:25:02
+            <div class="article_regDate flex-basis-200px"><i class="fas fa-clock"></i>2021-01-06 10:36:51
             </div>
             <div class="article_hit flex-basis-50px"><i class="fas fa-eye"></i>3</div>
             <div class="article_recommend flex-basis-50px"><i
@@ -193,19 +217,27 @@ href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.48.4/codemirror.min.cs
                 <i class="fas fa-comment"></i>0
             </div>    
         </div>
-        <div id="viewer" class="article_body flex-grow-1"># CONCAT
-```MySql
-CONCAT('문','자','열')
+        <div id="viewer" class="article_body flex-grow-1">map() 메소드는 배열 내의 모든 요소 각각에 대하여 주어진 함수를 호출한 결과를 모아 새로운 배열을 반환합니다.
+
+```javascript
+array.map(function(row,index){ 
+  return row * 2;
+});
+// row 는 처리할 요소 , index 는 처리할 현재 요소의 인덱스
+
+// map() 메소드는 다음과 같이 사용할 수도 있다.
+array.map((row,index) = > {
+   return row * 2;
+});
 ```
--> '문자열'
 
 </div>
 
         <div id="disqus_thread"></div>
         <script>
             var disqus_config = function () {
-				        this.page.url = 'https://blog.hailrain.site/it-detail-3.html';
-				        this.page.identifier = 'it-detail-3.html';
+				        this.page.url = 'https://blog.hailrain.site/it-detail-14.html';
+				        this.page.identifier = 'it-detail-14.html';
 				    };
             (function () { // DON'T EDIT BELOW THIS LINE
                 var d = document, s = d.createElement('script');
@@ -218,7 +250,7 @@ CONCAT('문','자','열')
                 Disqus.</a></noscript>
 
         <div class="article-move-button">
-            <div class="con next-article"><a href="it-detail-4.html">다음글</a></div><div class="con next-article"><a href="it-detail-2.html">이전글</a></div>
+            <div class="con next-article"><a href="it-detail-15.html">다음글</a></div><div class="con next-article"><a href="it-detail-7.html">이전글</a></div>
 
         </div>
     </section>

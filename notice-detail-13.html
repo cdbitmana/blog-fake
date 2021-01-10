@@ -18,8 +18,8 @@
     <meta name="title" content="DLOG" />
     <meta name="keywords" content="HTML, CSS, JAVASCRIPT, JAVA, SPRING, MySQL, 리눅스, 리액트" />
     <meta name="copyright" content="DLOG" />
-    <meta name="pubdate" content="2021-01-05T22:19:52" />
-    <meta name="lastmod" content="2021-01-05T22:19:52" />
+    <meta name="pubdate" content="2021-01-09T20:21:12" />
+    <meta name="lastmod" content="2021-01-09T20:21:12" />
     <!-- OPENGRAPH -->
     <meta property="og:site_name" content="DLOG" />
     <meta property="og:type" content="website" />
@@ -30,8 +30,8 @@
     <meta property="og:image:alt" content="blog.hailrain.site" />
     <meta property="og:image:width" content="486" />
     <meta property="og:image:height" content="254" />
-    <meta property="og:updated_time" content="2021-01-05T22:19:52" />
-    <meta property="og:pubdate" content="2021-01-05T22:19:52" />
+    <meta property="og:updated_time" content="2021-01-09T20:21:12" />
+    <meta property="og:pubdate" content="2021-01-09T20:21:12" />
     <meta property="og:url" content="https://blog.hailrain.site" />
     <!-- TWITTER -->
     <meta name="twitter:card" content="summary_large_image" />
@@ -67,6 +67,7 @@
     <link rel="shortcut icon" href="logoimage/favicon.png">
     <link rel="icon" href="logoimage/favicon.png">
 
+
 </head>
 
 <body id="top">
@@ -83,7 +84,7 @@
                 <li><a class="flex flex-jc-c flex-ai-c height-100p" href="">BOARD </a>
                     <div class="side-bar__menu-box2 width-100p">
                         <ul class="width-100p">
-                            <li><a href="notice-list-1.html"><span>공지사항게시판</span></a></li><li><a href="it-list-1.html"><span>IT게시판</span></a></li>
+                            <li><a href="notice-list-1.html"><span>공지사항게시판</span></a></li><li><a href="it-list-1.html"><span>IT게시판</span></a></li><li><a href="test-list-1.html"><span>테스트게시판</span></a></li>
                         </ul>
                     </div>
                 </li>
@@ -116,7 +117,7 @@
                             <li><a class="height-100p" href="">BOARD</a>
                                 <div class="width-100p menu-box2">
                                     <ul>
-                                        <li><a href="notice-list-1.html"><span>공지사항게시판</span></a></li><li><a href="it-list-1.html"><span>IT게시판</span></a></li>
+                                        <li><a href="notice-list-1.html"><span>공지사항게시판</span></a></li><li><a href="it-list-1.html"><span>IT게시판</span></a></li><li><a href="test-list-1.html"><span>테스트게시판</span></a></li>
                                     </ul>
                                 </div>
                             </li>
@@ -131,7 +132,32 @@
             </header>
         </div>
 
-        <a class="scrolltop-button" href="#top"><i class="fas fa-arrow-up"></i></a><main class="flex flex-grow-1 flex-dir-col con-min-width">
+        <a class="scrolltop-button" href="#top"><i class="fas fa-arrow-up"></i></a><!-- 하이라이트 라이브러리 추가, 토스트 UI 에디터에서 사용됨 -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.4.1/highlight.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.4.1/styles/default.min.css">
+<!-- 토스트 UI 에디터, 자바스크립트 코어 -->
+<script src="https://uicdn.toast.com/editor/latest/toastui-editor-all.min.js"></script>
+<!-- 코드 미러 라이브러리 추가, 토스트 UI 에디터에서 사용됨 -->
+<link
+rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.48.4/codemirror.min.css"
+/>
+<!-- 토스트 UI 에디터, CSS 코어 -->
+<link rel="stylesheet" href="https://uicdn.toast.com/editor/latest/toastui-editor.min.css" />
+<!-- 토스트 UI 에디터, 신택스 하이라이트 플러그인 추가 -->
+<script
+    src="https://uicdn.toast.com/editor-plugin-code-syntax-highlight/latest/toastui-editor-plugin-code-syntax-highlight.min.js"></script>
+<!-- 디스커스 댓글 기능 추가 -->
+<script id="dsq-count-scr" src="//blogssg.disqus.com/count.js" async></script>
+<!-- lodash 불러오기 -->
+<script
+	src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.20/lodash.min.js"></script>
+
+<!-- vue 불러오기 -->
+<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+
+
+<main class="flex flex-grow-1 flex-dir-col con-min-width">
 
 
     <section class="article main-con flex flex-dir-col">
@@ -142,7 +168,7 @@
             </div>
             <div class="article_regDate flex-basis-200px"><i class="fas fa-clock"></i>2021-01-05 21:30:14
             </div>
-            <div class="article_hit flex-basis-50px"><i class="fas fa-eye"></i>3</div>
+            <div class="article_hit flex-basis-50px"><i class="fas fa-eye"></i>1</div>
             <div class="article_recommend flex-basis-50px"><i
                     class="fas fa-thumbs-up"></i>0</div>
             <div class="article_comments flex-basis-50px">
@@ -173,10 +199,16 @@
         </div>
     </section>
 
-    <section class="main-con article-list">
-        <section class="title-bar">
-            <h1 class="title-bar__title-box flex flex-jc-c"><span>공지사항 게시판</span></h1>
-        </section>
+    <section class="title-bar">
+        <h1 class="title-bar__title-box flex flex-jc-c"><a href="notice-list-1.html"><span>공지사항 게시판</span></a></h1>
+    </section>
+    <section class="article-list-wrap main-con article-list">        
+        <div class="searchBox">
+            <div>
+                <input @input="searchKeywordInputed" :value="searchKeyword" type="text" @keyup="searchKeywordInputedEnter(this)">
+                <button @click="searchKeywordClick"><i class="fas fa-search"></i></button>
+            </div>
+        </div>
         <section class="board-list">
             <table class="width-100p">
                 <tr class="tag">
@@ -187,14 +219,14 @@
                     <td class="font-bold cell-hit">조회 수</td>
                     <td class="font-bold cell-recommend">추천 수</td>
                 </tr>
-                <tr class ="line-separate"><td colspan="6"></td></tr><tr><td class="cell-id"> &gt; </td><td class="cell-title"><a href="notice-detail-13.html">게시판 이용 수칙</td><td class="cell-writer">이명학</td><td class="cell-regDate">2021-01-05 21:30:14</td><td class="cell-hit">3</td><td class="cell-recommend">0</td></tr><tr class ="line-separate"><td colspan="6"></td></tr><tr><td class="cell-id">12</td><td class="cell-title"><a href="notice-detail-12.html">공지사항입니다. 😄</td><td class="cell-writer">이명학</td><td class="cell-regDate">2020-12-21 09:34:32</td><td class="cell-hit">2</td><td class="cell-recommend">0</td></tr>
+                <tbody v-for="article in articles"><tr class ="line-separate"><td colspan="6"></td></tr><tr><td class="cell-id">{{article.id}}</td><td class="cell-title"><a :href="'notice-detail-'+article.id+'.html'">{{article.title}}</td><td class="cell-writer">{{article.writer}}</td><td class="cell-regDate">{{article.regDate}}</td><td class="cell-hit">{{article.hitCount}}</td><td class="cell-recommend">{{article.likesCount}}</td></tr></tbody>
             </table>
         </section>
         <div class="main-con flex-grow-1"></div>
         <section class="page-button">
 
             <div class="flex flex-ai-c flex-jc-s-bet">
-                <div class="flex flex-basis-100px">
+                <div class="lastmovebutton flex flex-basis-100px">
                     
                     
 
@@ -202,7 +234,7 @@
                 <ul class="flex flex-jc-c flex-ai-e flex-grow-1">
                     <li class="flex flex-jc-c flex-basis-50px"><span>1</span></li>
                 </ul>
-                <div class="flex flex-basis-100px">
+                <div class="firstmovebutton flex flex-basis-100px">
                     
                     
                 </div>
@@ -212,7 +244,9 @@
     </section>
 
 
-</main><footer class="bottom-logo-bar con-min-width">
+</main>
+
+<script src="common.js"></script><footer class="bottom-logo-bar con-min-width">
     <div class="con flex">        
             <a class="bottom-logo-bar__logo-box" href="index.html" class=""></a>        
         <div class="copyright-box">
@@ -239,22 +273,7 @@
 </footer>
 </div>
 
-<!-- 하이라이트 라이브러리 추가, 토스트 UI 에디터에서 사용됨 -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.4.1/highlight.min.js"></script>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.4.1/styles/default.min.css">
-<!-- 토스트 UI 에디터, 자바스크립트 코어 -->
-<script src="https://uicdn.toast.com/editor/latest/toastui-editor-all.min.js"></script>
-<!-- 코드 미러 라이브러리 추가, 토스트 UI 에디터에서 사용됨 -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.58.3/codemirror.min.css" />
-<!-- 토스트 UI 에디터, CSS 코어 -->
-<link rel="stylesheet" href="https://uicdn.toast.com/editor/latest/toastui-editor.min.css" />
-<!-- 토스트 UI 에디터, 신택스 하이라이트 플러그인 추가 -->
-<script
-    src="https://uicdn.toast.com/editor-plugin-code-syntax-highlight/latest/toastui-editor-plugin-code-syntax-highlight.min.js"></script>
-<!-- 디스커스 댓글 기능 추가 -->
-<script id="dsq-count-scr" src="//blogssg.disqus.com/count.js" async></script>
 
-<script src="common.js"></script>
 
 </body>
 
