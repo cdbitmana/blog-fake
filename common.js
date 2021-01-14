@@ -175,7 +175,8 @@ $.get(
 				title: row.title,
 				body: row.body,
 				hitCount : row.hitCount,
-				likesCount : row.likesCount
+                likesCount : row.likesCount,
+                commentsCount : row.commentsCount
 			};
             
             articleList.push(article);
@@ -186,12 +187,15 @@ $.get(
 	'json'
 );
 
+
 const articleListBoxVue = new Vue({
 	el: ".article-list-wrap",
 	data: {
 		articleList: articleList,
         searchKeyword: '',
-        searchResult:''
+        searchResult:'',
+        currentPage : 1,
+        lastPage : 1
 	},
 	methods: {
 		searchKeywordInputed: _.debounce(function(e) {
@@ -199,13 +203,36 @@ const articleListBoxVue = new Vue({
         },500),
         searchKeywordClick:function(){
             this.searchResult = this.searchKeyword;
+            this.currentPage = 1;
         },
         searchKeywordInputedEnter:function(){
             if(event.keyCode==13){
                 this.searchResult = this.searchKeyword;
+                this.currentPage = 1;
             }
+        },
+        movePage:function(page){
+            this.currentPage = page;           
+            
+        },
+        movePageNext:function(){
+            this.currentPage = this.currentPage + 10;
+            this.currentPage = Math.ceil(this.currentPage / 10 );
+            this.currentPage = (this.currentPage - 1) * 10 + 1;
+        },
+        movePagePrev:function(){
+            this.currentPage = this.currentPage - 10;
+            this.currentPage = Math.ceil(this.currentPage / 10 );
+            this.currentPage = (this.currentPage - 1) * 10 + 1;
+        },
+        movePageFirst:function(){
+            this.currentPage = 1;
+        },
+        movePageLast:function(){
+            this.currentPage = this.lastPage;
+            console.log(this.lastPage);
         }
-	},
+    },   
 	computed: {
 		filterKey: function() {
 			return this.searchResult.toLowerCase();
@@ -213,8 +240,9 @@ const articleListBoxVue = new Vue({
 		filtered: function() {            
 			if (this.filterKey.length == 0) {
 				return this.articleList;
-			}
-            
+            }
+                        
+
 			return this.articleList.filter((row) => {
 				const keys = ['title', 'writer', 'body', 'regDate'];
 
@@ -226,28 +254,70 @@ const articleListBoxVue = new Vue({
             });
             
 		},
-		articles: function(){          
-            
+		articles: function(){  
+           
+           
+
+            let itemsInAPage = 10;
+            let start = (this.currentPage - 1) * itemsInAPage;
+            let end = start + itemsInAPage;
+            if(end > this.filtered.length){
+                end = this.filtered.length;
+            }
+
+         
+
 			if(this.filtered.length > 10){
-				const ar = [];
-				for (var i = 0 ; i < 10 ; i++){
+                const ar = [];                
+
+                let index = 0;
+				for (var j = start ; j < end ; j++){
 					
-					ar[i] = this.filtered[i];
-					
-				} 
-				return ar;
+					ar[index] = this.filtered[j];
+                    index++;
+				}             
+                 return ar;
 			}else {
                 return this.filtered;
             }
         },
         pages:function(){
-            let pages = [];
+                
+            let itemsInAPage = 10;
             let pagesCount = this.filtered.length / 10;
             pagesCount =  Math.ceil(pagesCount);
-            for(let i = 1; i <= pagesCount ; i++){
-                pages.push({index:i});
+            this.lastPage = pagesCount;
+            let lastPages = pagesCount / 10;
+            lastPages = Math.ceil(lastPages);
+            lastPages = (lastPages-1) * itemsInAPage + 1;       
+            let start = this.currentPage / 10;
+            start = Math.ceil(start);
+            start = (start - 1) * itemsInAPage + 1;
+            let end = start + itemsInAPage - 1; 
+            if(end > pagesCount){
+                end = pagesCount; 
             }
+            let pages = [];            
+            
+            for(let i = start; i <= end ; i++){
+                pages.push(i);
+            }
+           
+            if(this.currentPage <= 10){
+                $('span.movePagePrev').css('display', 'none');
+            }
+            if(this.currentPage > 10){
+                $('span.movePagePrev').css('display', 'inline-block');
+            }
+            if(this.currentPage >= lastPages){
+                $('span.movePageNext').css('display', 'none');
+            }
+            if(this.currentPage < lastPages){
+                $('span.movePageNext').css('display', 'inline-block');
+            }
+
            return pages;
+
         }
         
 	}

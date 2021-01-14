@@ -636,7 +636,7 @@
            font-weight: bold;
            font-size:1.4rem;
        }
-       .page-button > ul > li > .currentPage:hover {
+       .page-button > ul > li > :not(.currentPage):hover {
         cursor: pointer;
     }
        .lastmovebutton {
@@ -732,9 +732,6 @@
        .article-move-button > div > a:hover{
            text-decoration: underline;
        }
-
-
-      
        .reply__section{
            padding:15px 0;
        }
@@ -755,20 +752,65 @@
        .reply-list > .reply_regDate {
            padding-right:15px;
        }
-        .page-button > div > ul > li > span {
+        .page-button > div > ul > li > .currentPage {
            font-weight: bold;
            font-size:1.4rem;
        }
+       .page-button > div > ul > li > :not(.currentPage) {
+        cursor:pointer;
+    }
 
        /* 게시물 상세보기 끝 */
 
        /* 통계 상세보기 시작 */
+       .stat-box{
+        position:relative;
+        margin:100px auto;        
+        border:6px solid #e2a787;
+        border-radius:50px;
+        background-color:#e2a787;
+    }
        .articleChart{
-           margin:50px 0px;
+           position:relative;
+           margin-top:100px;
+           margin-bottom:10px;
        }
        .articleChart > div {
            padding:20px;
        }
+       .whole { 
+        color:white;
+        position:absolute;
+        top:-40px;
+        left:50%;
+        transform: translateX(-50%);
+        padding:15px;
+        border:5px solid white;
+        border-radius:10px; 
+        background-color: #e2a787;
+        text-align: center;
+        font-size:3rem;
+    }
+       .articleChart > span {  
+           padding:10px;
+           border:4px solid white;
+           border-radius:8px;         
+           font-size:2rem;
+           margin-left:auto;
+           margin-right:auto;
+           text-align: center;
+           font-weight:bold;
+           color:white;
+       }
+       .chartBox {
+        margin-top:30px;           
+        position:relative;
+    }
+    .chartBox:last-child{
+        margin-bottom:100px;
+    }
+   
+      
         /* 통계 상세보기 끝 */  
         
         /* 프로필 페이지 시작 */

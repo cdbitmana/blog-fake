@@ -18,8 +18,8 @@
     <meta name="title" content="DLOG" />
     <meta name="keywords" content="HTML, CSS, JAVASCRIPT, JAVA, SPRING, MySQL, 리눅스, 리액트" />
     <meta name="copyright" content="DLOG" />
-    <meta name="pubdate" content="2021-01-09T20:21:12" />
-    <meta name="lastmod" content="2021-01-09T20:21:12" />
+    <meta name="pubdate" content="2021-01-14T22:24:40" />
+    <meta name="lastmod" content="2021-01-14T22:24:40" />
     <!-- OPENGRAPH -->
     <meta property="og:site_name" content="DLOG" />
     <meta property="og:type" content="website" />
@@ -30,8 +30,8 @@
     <meta property="og:image:alt" content="blog.hailrain.site" />
     <meta property="og:image:width" content="486" />
     <meta property="og:image:height" content="254" />
-    <meta property="og:updated_time" content="2021-01-09T20:21:12" />
-    <meta property="og:pubdate" content="2021-01-09T20:21:12" />
+    <meta property="og:updated_time" content="2021-01-14T22:24:40" />
+    <meta property="og:pubdate" content="2021-01-14T22:24:40" />
     <meta property="og:url" content="https://blog.hailrain.site" />
     <!-- TWITTER -->
     <meta name="twitter:card" content="summary_large_image" />
@@ -84,7 +84,7 @@
                 <li><a class="flex flex-jc-c flex-ai-c height-100p" href="">BOARD </a>
                     <div class="side-bar__menu-box2 width-100p">
                         <ul class="width-100p">
-                            <li><a href="notice-list-1.html"><span>공지사항게시판</span></a></li><li><a href="it-list-1.html"><span>IT게시판</span></a></li><li><a href="test-list-1.html"><span>테스트게시판</span></a></li>
+                            <li><a href="notice-list-1.html"><span>공지사항게시판</span></a></li><li><a href="it-list-1.html"><span>IT게시판</span></a></li>
                         </ul>
                     </div>
                 </li>
@@ -117,7 +117,7 @@
                             <li><a class="height-100p" href="">BOARD</a>
                                 <div class="width-100p menu-box2">
                                     <ul>
-                                        <li><a href="notice-list-1.html"><span>공지사항게시판</span></a></li><li><a href="it-list-1.html"><span>IT게시판</span></a></li><li><a href="test-list-1.html"><span>테스트게시판</span></a></li>
+                                        <li><a href="notice-list-1.html"><span>공지사항게시판</span></a></li><li><a href="it-list-1.html"><span>IT게시판</span></a></li>
                                     </ul>
                                 </div>
                             </li>
@@ -169,7 +169,24 @@ href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.48.4/codemirror.min.cs
 <h1 class="home-recent">최근 작성된 글</h1>
 <div class="flex flex-wrap flex-jc-s-bet home-main main-con">
     
-    <div class="home-main__article-box"><div class="flex home-main__article-box__titlebar"><div class="home-main__article-box__boardname">IT</div><div class="home-main__article-box__title flex-grow-1">Vue) Array.prototype.forEach()</div><div class="home-main__article-box__writer">이명학</div></div><div class="home-main__article-box__body">forEach() 메서드는 주어진 함수를 배열 요소 각각에 대해 실행합니다.
+    <div class="home-main__article-box"><div class="flex home-main__article-box__titlebar"><div class="home-main__article-box__boardname">IT</div><div class="home-main__article-box__title flex-grow-1">MySQL) 1부터 n까지 나타내는 쿼리</div><div class="home-main__article-box__writer">이명학</div></div><div class="home-main__article-box__body">```mysql
+WITH RECURSIVE rgen(n) AS (
+    SELECT 1
+    UNION ALL
+    SELECT n + 1
+    FROM rgen
+    WHERE n < @hashsCount
+)
+SELECT n
+FROM rgen;
+```
+</div><div class="home-main__article-box__detail"><a href="it-detail-15.html">자세히 보기</a></div></div><div class="home-main__article-box"><div class="flex home-main__article-box__titlebar"><div class="home-main__article-box__boardname">IT</div><div class="home-main__article-box__title flex-grow-1">JAVASCRIPT) 페이지 이름 찾기</div><div class="home-main__article-box__writer">이명학</div></div><div class="home-main__article-box__body">```javescript
+var pageName = ""; 
+var tempPageName = window.location.href;
+var strPageName = tempPageName.split("/");
+pageName = strPageName[strPageName.length-1].split("?")[0];
+```
+</div><div class="home-main__article-box__detail"><a href="it-detail-14.html">자세히 보기</a></div></div><div class="home-main__article-box"><div class="flex home-main__article-box__titlebar"><div class="home-main__article-box__boardname">IT</div><div class="home-main__article-box__title flex-grow-1">Vue) Array.prototype.forEach()</div><div class="home-main__article-box__writer">이명학</div></div><div class="home-main__article-box__body">forEach() 메서드는 주어진 함수를 배열 요소 각각에 대해 실행합니다.
 ```javascript
 array.forEach((row, i) => {
   console.log(i);
@@ -180,7 +197,7 @@ array.forEach((row, i) => {
 array.forEach((row,index) => {
   return row > 10;
 });
-```</div><div class="home-main__article-box__detail"><a href="it-detail-17.html">자세히 보기</a></div></div><div class="home-main__article-box"><div class="flex home-main__article-box__titlebar"><div class="home-main__article-box__boardname">IT</div><div class="home-main__article-box__title flex-grow-1">Vue) Array.prototype.some()</div><div class="home-main__article-box__writer">이명학</div></div><div class="home-main__article-box__body">some() 메서드는 배열 안의 어떤 요소라도 주어진 판별 함수를 통과하는지 테스트합니다.
+```</div><div class="home-main__article-box__detail"><a href="it-detail-13.html">자세히 보기</a></div></div><div class="home-main__article-box"><div class="flex home-main__article-box__titlebar"><div class="home-main__article-box__boardname">IT</div><div class="home-main__article-box__title flex-grow-1">Vue) Array.prototype.some()</div><div class="home-main__article-box__writer">이명학</div></div><div class="home-main__article-box__body">SOME() 메서드는 배열 안의 어떤 요소라도 주어진 판별 함수를 통과하는지 테스트합니다.
 ```javascript
 array.some((row, i) => {
   return row == 15;
@@ -191,7 +208,7 @@ array.some((row, i) => {
 array.some((row,index) => {
   return row > 10;
 });
-```</div><div class="home-main__article-box__detail"><a href="it-detail-16.html">자세히 보기</a></div></div><div class="home-main__article-box"><div class="flex home-main__article-box__titlebar"><div class="home-main__article-box__boardname">IT</div><div class="home-main__article-box__title flex-grow-1">Vue) Array.prototype.filter()</div><div class="home-main__article-box__writer">이명학</div></div><div class="home-main__article-box__body">filter() 메소드는 주어진 함수의 테스트를 통과하는 모든 요소를 모아 새로운 배열로 반환합니다.
+```</div><div class="home-main__article-box__detail"><a href="it-detail-12.html">자세히 보기</a></div></div><div class="home-main__article-box"><div class="flex home-main__article-box__titlebar"><div class="home-main__article-box__boardname">IT</div><div class="home-main__article-box__title flex-grow-1">Vue) Array.prototype.filter()</div><div class="home-main__article-box__writer">이명학</div></div><div class="home-main__article-box__body">FILTER() 메소드는 주어진 함수의 테스트를 통과하는 모든 요소를 모아 새로운 배열로 반환합니다.
 
 ```javascript
 array.filter(function(row,index) {
@@ -203,7 +220,7 @@ array.filter(function(row,index) {
 array.filter((row,index) => {
   return row > 10;
 });
-```</div><div class="home-main__article-box__detail"><a href="it-detail-15.html">자세히 보기</a></div></div><div class="home-main__article-box"><div class="flex home-main__article-box__titlebar"><div class="home-main__article-box__boardname">IT</div><div class="home-main__article-box__title flex-grow-1">Vue) Array.prototype.map()</div><div class="home-main__article-box__writer">이명학</div></div><div class="home-main__article-box__body">map() 메소드는 배열 내의 모든 요소 각각에 대하여 주어진 함수를 호출한 결과를 모아 새로운 배열을 반환합니다.
+```</div><div class="home-main__article-box__detail"><a href="it-detail-11.html">자세히 보기</a></div></div><div class="home-main__article-box"><div class="flex home-main__article-box__titlebar"><div class="home-main__article-box__boardname">IT</div><div class="home-main__article-box__title flex-grow-1">Vue) Array.prototype.map()</div><div class="home-main__article-box__writer">이명학</div></div><div class="home-main__article-box__body">map() 메소드는 배열 내의 모든 요소 각각에 대하여 주어진 함수를 호출한 결과를 모아 새로운 배열을 반환합니다.
 
 ```javascript
 array.map(function(row,index){ 
@@ -215,10 +232,7 @@ array.map(function(row,index){
 array.map((row,index) = > {
    return row * 2;
 });
-```
-
-</div><div class="home-main__article-box__detail"><a href="it-detail-14.html">자세히 보기</a></div></div><div class="home-main__article-box"><div class="flex home-main__article-box__titlebar"><div class="home-main__article-box__boardname">공지사항</div><div class="home-main__article-box__title flex-grow-1">게시판 이용 수칙</div><div class="home-main__article-box__writer">이명학</div></div><div class="home-main__article-box__body">각 게시판에 맞는 글을 작성해 주세요.</div><div class="home-main__article-box__detail"><a href="notice-detail-13.html">자세히 보기</a></div></div><div class="home-main__article-box"><div class="flex home-main__article-box__titlebar"><div class="home-main__article-box__boardname">공지사항</div><div class="home-main__article-box__title flex-grow-1">공지사항입니다. 😄</div><div class="home-main__article-box__writer">이명학</div></div><div class="home-main__article-box__body">앞으로 풀스택 개발 관련 글이 올라옵니다.
-😄😄😄</div><div class="home-main__article-box__detail"><a href="notice-detail-12.html">자세히 보기</a></div></div>
+```</div><div class="home-main__article-box__detail"><a href="it-detail-10.html">자세히 보기</a></div></div>
 
     
 

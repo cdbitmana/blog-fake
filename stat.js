@@ -45,7 +45,7 @@ $(window).on('scroll',function(){
     
     
     /* chart.js api 시작 */
-    var articleHit1 = document.getElementById('articleHitChart1');var chart1 = new Chart(articleHit1, {type: 'doughnut',data: {labels: ['공지사항입니다. 😄','게시판 이용 수칙'],datasets: [{data: [2,1],backgroundColor:['#F8E88B','#F69069','#8482ff','#ff8293','#E4B660','#ff82ff','#66d4f5']}]},options: {}});var articleHit2 = document.getElementById('articleHitChart2');var chart2 = new Chart(articleHit2, {type: 'doughnut',data: {labels: ['자바) Switch 구문','자바) 배열 정렬하는 식','Vue) Array.prototype.filter()','Vue) Array.prototype.forEach()','MySQL) 문자열 합치기 CONCAT'],datasets: [{data: [4,4,4,4,3],backgroundColor:['#F8E88B','#F69069','#8482ff','#ff8293','#E4B660','#ff82ff','#66d4f5']}]},options: {}});
+    var articleHit1 = document.getElementById('articleHitChart1');var chart1 = new Chart(articleHit1, {type: 'doughnut',data: {labels: ['공지사항입니다. 😀','게시판 이용 수칙'],datasets: [{data: [2,1],backgroundColor:['#F8E88B','#F69069','#8482ff','#ff8293','#E4B660','#ff82ff','#66d4f5']}]},options: {}});var articleHit2 = document.getElementById('articleHitChart2');var chart2 = new Chart(articleHit2, {type: 'doughnut',data: {labels: ['자바) Switch 구문','자바) 배열 정렬하는 식','Vue) Array.prototype.filter()','MySQL) 문자열 합치기 CONCAT','자바) 폴더와 하위파일 삭제하는 메소드'],datasets: [{data: [5,5,5,3,3],backgroundColor:['#F8E88B','#F69069','#8482ff','#ff8293','#E4B660','#ff82ff','#66d4f5']}]},options: {}});
     /*
     var articleHit = document.getElementById('articleHitChart').getContext('2d');
     var chart = new Chart(articleHit, {

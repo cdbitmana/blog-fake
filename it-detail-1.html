@@ -18,8 +18,8 @@
     <meta name="title" content="DLOG" />
     <meta name="keywords" content="HTML, CSS, JAVASCRIPT, JAVA, SPRING, MySQL, 리눅스, 리액트" />
     <meta name="copyright" content="DLOG" />
-    <meta name="pubdate" content="2021-01-09T20:21:12" />
-    <meta name="lastmod" content="2021-01-09T20:21:12" />
+    <meta name="pubdate" content="2021-01-14T22:24:42" />
+    <meta name="lastmod" content="2021-01-14T22:24:42" />
     <!-- OPENGRAPH -->
     <meta property="og:site_name" content="DLOG" />
     <meta property="og:type" content="website" />
@@ -65,15 +65,14 @@ switch value
          default 
          Systemoutprintln그 외의 숫자
 
-
 " />
     <meta property="og:locale" content="ko_KR" />
     <meta property="og:image" content="/logoimage/logo.png" />
     <meta property="og:image:alt" content="blog.hailrain.site" />
     <meta property="og:image:width" content="486" />
     <meta property="og:image:height" content="254" />
-    <meta property="og:updated_time" content="2021-01-09T20:21:12" />
-    <meta property="og:pubdate" content="2021-01-09T20:21:12" />
+    <meta property="og:updated_time" content="2021-01-14T22:24:42" />
+    <meta property="og:pubdate" content="2021-01-14T22:24:42" />
     <meta property="og:url" content="https://blog.hailrain.site" />
     <!-- TWITTER -->
     <meta name="twitter:card" content="summary_large_image" />
@@ -122,7 +121,6 @@ switch value
          default 
          Systemoutprintln그 외의 숫자
 
-
 " />
     <!-- GOOGLE+ -->
     <meta itemprop="headline" content="DLOG" />
@@ -168,7 +166,6 @@ switch value
          default 
          Systemoutprintln그 외의 숫자
 
-
 " />
     <meta itemprop="image" content="/logoimage/logo.png" />
 
@@ -210,7 +207,7 @@ switch value
                 <li><a class="flex flex-jc-c flex-ai-c height-100p" href="">BOARD </a>
                     <div class="side-bar__menu-box2 width-100p">
                         <ul class="width-100p">
-                            <li><a href="notice-list-1.html"><span>공지사항게시판</span></a></li><li><a href="it-list-1.html"><span>IT게시판</span></a></li><li><a href="test-list-1.html"><span>테스트게시판</span></a></li>
+                            <li><a href="notice-list-1.html"><span>공지사항게시판</span></a></li><li><a href="it-list-1.html"><span>IT게시판</span></a></li>
                         </ul>
                     </div>
                 </li>
@@ -243,7 +240,7 @@ switch value
                             <li><a class="height-100p" href="">BOARD</a>
                                 <div class="width-100p menu-box2">
                                     <ul>
-                                        <li><a href="notice-list-1.html"><span>공지사항게시판</span></a></li><li><a href="it-list-1.html"><span>IT게시판</span></a></li><li><a href="test-list-1.html"><span>테스트게시판</span></a></li>
+                                        <li><a href="notice-list-1.html"><span>공지사항게시판</span></a></li><li><a href="it-list-1.html"><span>IT게시판</span></a></li>
                                     </ul>
                                 </div>
                             </li>
@@ -292,9 +289,9 @@ href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.48.4/codemirror.min.cs
             <div class="article_title flex-grow-1">자바) Switch 구문</div>
             <div class="article_writer flex-basis-100px"><i class="fas fa-user"></i>이명학
             </div>
-            <div class="article_regDate flex-basis-200px"><i class="fas fa-clock"></i>2020-12-17 13:28:21
+            <div class="article_regDate flex-basis-200px"><i class="fas fa-clock"></i>2021-01-14 09:03:55
             </div>
-            <div class="article_hit flex-basis-50px"><i class="fas fa-eye"></i>4</div>
+            <div class="article_hit flex-basis-50px"><i class="fas fa-eye"></i>5</div>
             <div class="article_recommend flex-basis-50px"><i
                     class="fas fa-thumbs-up"></i>0</div>
             <div class="article_comments flex-basis-50px">
@@ -342,8 +339,7 @@ switch (value) {
          default :
          System.out.println("그 외의 숫자");
 }
-```
-</div>
+```</div>
 
         <div id="disqus_thread"></div>
         <script>
@@ -390,21 +386,22 @@ switch (value) {
                 <tbody v-for="article in articles"><tr class ="line-separate"><td colspan="6"></td></tr><tr><td class="cell-id">{{article.id}}</td><td class="cell-title"><a :href="'it-detail-'+article.id+'.html'">{{article.title}}</td><td class="cell-writer">{{article.writer}}</td><td class="cell-regDate">{{article.regDate}}</td><td class="cell-hit">{{article.hitCount}}</td><td class="cell-recommend">{{article.likesCount}}</td></tr></tbody>
             </table>
         </section>
+        
         <div class="main-con flex-grow-1"></div>
         <section class="page-button">
 
             <div class="flex flex-ai-c flex-jc-s-bet">
                 <div class="lastmovebutton flex flex-basis-100px">
-                    <div class="flex flex-basis-50px"><a href="it-list-1.html"> &lt;&lt; </a></div>
-                    
+                    <div class="flex flex-basis-50px"><span @click="movePageFirst"><<</span></div>
+                    <div class="flex flex-basis-50px"><span class="movePagePrev" @click="movePagePrev">이전</span></div>
 
                 </div>
                 <ul class="flex flex-jc-c flex-ai-e flex-grow-1">
-                    <li class="flex flex-jc-c flex-basis-50px"><a href="it-list-1.html"> 1</a></li><li class="flex flex-jc-c flex-basis-50px"><span>2</span></li>
+                    <li v-for="page in pages" class="flex flex-jc-c flex-basis-50px"><span @click="movePage(page)" class="currentPageCheck">{{page}}</span></li>
                 </ul>
                 <div class="firstmovebutton flex flex-basis-100px">
-                    
-                    <div class="flex flex-basis-50px"><a href="it-list-2.html"> &gt&gt; </a></div>
+                    <div class="flex flex-basis-50px"><span class="movePageNext" @click="movePageNext">다음</span></div>
+                    <div class="flex flex-basis-50px"><span @click="movePageLast">>></span></div>
                 </div>
             </div>
 
