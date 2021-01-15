@@ -18,8 +18,8 @@
     <meta name="title" content="DLOG" />
     <meta name="keywords" content="HTML, CSS, JAVASCRIPT, JAVA, SPRING, MySQL, 리눅스, 리액트" />
     <meta name="copyright" content="DLOG" />
-    <meta name="pubdate" content="2021-01-15T17:54:44" />
-    <meta name="lastmod" content="2021-01-15T17:54:44" />
+    <meta name="pubdate" content="2021-01-16T00:32:07" />
+    <meta name="lastmod" content="2021-01-16T00:32:07" />
     <!-- OPENGRAPH -->
     <meta property="og:site_name" content="DLOG" />
     <meta property="og:type" content="website" />
@@ -43,8 +43,8 @@ width100px  height100px 인 영역에 bordermarginpadding등의 요소가 추가
     <meta property="og:image:alt" content="blog.hailrain.site" />
     <meta property="og:image:width" content="486" />
     <meta property="og:image:height" content="254" />
-    <meta property="og:updated_time" content="2021-01-15T17:54:44" />
-    <meta property="og:pubdate" content="2021-01-15T17:54:44" />
+    <meta property="og:updated_time" content="2021-01-16T00:32:07" />
+    <meta property="og:pubdate" content="2021-01-16T00:32:07" />
     <meta property="og:url" content="https://blog.hailrain.site" />
     <!-- TWITTER -->
     <meta name="twitter:card" content="summary_large_image" />
@@ -124,7 +124,7 @@ width100px  height100px 인 영역에 bordermarginpadding등의 요소가 추가
                 <li><a class="flex flex-jc-c flex-ai-c height-100p" href="">BOARD </a>
                     <div class="side-bar__menu-box2 width-100p">
                         <ul class="width-100p">
-                            <li><a href="notice-list-1.html"><span>공지사항게시판</span></a></li><li><a href="it-list-1.html"><span>IT게시판</span></a></li>
+                            <li><a href="notice-list.html?board=notice"><span>공지사항게시판</span></a></li><li><a href="it-list.html?board=it"><span>IT게시판</span></a></li>
                         </ul>
                     </div>
                 </li>
@@ -157,7 +157,7 @@ width100px  height100px 인 영역에 bordermarginpadding등의 요소가 추가
                             <li><a class="height-100p" href="">BOARD</a>
                                 <div class="width-100p menu-box2">
                                     <ul>
-                                        <li><a href="notice-list-1.html"><span>공지사항게시판</span></a></li><li><a href="it-list-1.html"><span>IT게시판</span></a></li>
+                                        <li><a href="notice-list.html?board=notice"><span>공지사항게시판</span></a></li><li><a href="it-list.html?board=it"><span>IT게시판</span></a></li>
                                     </ul>
                                 </div>
                             </li>
@@ -253,7 +253,7 @@ border-box 는 width속성과 height속성이 테두리를 포함한 영역의 �
     </section>
 
     <section class="title-bar">
-        <h1 class="title-bar__title-box flex flex-jc-c"><a href="it-list-1.html"><span>IT 게시판</span></a></h1>
+        <h1 class="title-bar__title-box flex flex-jc-c"><a href="it-list.html?board=it"><span>IT 게시판</span></a></h1>
     </section>
     <section class="article-list-wrap main-con article-list">        
         <div class="searchBox">
@@ -272,7 +272,7 @@ border-box 는 width속성과 height속성이 테두리를 포함한 영역의 �
                     <td class="font-bold cell-hit">조회 수</td>
                     <td class="font-bold cell-recommend">추천 수</td>
                 </tr>
-                <tbody v-for="article in articles"><tr class ="line-separate"><td colspan="6"></td></tr><tr><td class="cell-id">{{article.id}}</td><td class="cell-title"><a :href="'article-detail-'+article.id+'.html'">{{article.title}}</td><td class="cell-writer">{{article.writer}}</td><td class="cell-regDate">{{article.regDate}}</td><td class="cell-hit">{{article.hitCount}}</td><td class="cell-recommend">{{article.likesCount}}</td></tr></tbody>
+                <tbody class="articles_notExists"><tr><td colspan="6">검색 결과가 없습니다.</td></tr></tbody><tbody class="articles_exists" v-for="article in articles"><tr class ="line-separate"><td colspan="6"></td></tr><tr><td class="cell-id">{{article.id}}</td><td class="cell-title"><a :href="'article-detail-'+article.id+'.html?board=it&id='+article.id">{{article.title}}</a></td><td class="cell-writer">{{article.writer}}</td><td class="cell-regDate">{{article.regDate}}</td><td class="cell-hit">{{article.hitCount}}</td><td class="cell-recommend">{{article.likesCount}}</td></tr></tbody>
             </table>
         </section>
         
@@ -281,7 +281,7 @@ border-box 는 width속성과 height속성이 테두리를 포함한 영역의 �
 
             <div class="flex flex-ai-c flex-jc-s-bet">
                 <div class="lastmovebutton flex flex-basis-100px">
-                    <div class="flex flex-basis-50px"><span @click="movePageFirst"><<</span></div>
+                    <div class="movePageFirst flex flex-basis-50px"><span @click="movePageFirst">&lt;&lt;</span></div>
                     <div class="flex flex-basis-50px"><span class="movePagePrev" @click="movePagePrev">이전</span></div>
 
                 </div>
@@ -290,7 +290,7 @@ border-box 는 width속성과 height속성이 테두리를 포함한 영역의 �
                 </ul>
                 <div class="firstmovebutton flex flex-basis-100px">
                     <div class="flex flex-basis-50px"><span class="movePageNext" @click="movePageNext">다음</span></div>
-                    <div class="flex flex-basis-50px"><span @click="movePageLast">>></span></div>
+                    <div class="movePageLast flex flex-basis-50px"><span @click="movePageLast">&gt;&gt;</span></div>
                 </div>
             </div>
 
