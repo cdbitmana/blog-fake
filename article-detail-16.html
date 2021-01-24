@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-TDBME1CZ9L"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-TDBME1CZ9L');
+</script>
+    <!-- 메타태그정보 //-->
+    <!-- META -->
+    <link rel="canonical" href="https://blog.hailrain.site" />
+    <meta name="subject" content="MySQL) 날짜 조건에 맞춰서 정해진 형식대로 SELECT" />
+    <meta name="title" content="DLOG" />
+    <meta name="keywords" content="HTML, CSS, JAVASCRIPT, JAVA, SPRING, MySQL, 리눅스, 리액트" />
+    <meta name="copyright" content="DLOG" />
+    <meta name="pubdate" content="2021-01-23T02:20:57" />
+    <meta name="lastmod" content="2021-01-23T02:20:57" />
+    <!-- OPENGRAPH -->
+    <meta property="og:site_name" content="DLOG" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="MySQL) 날짜 조건에 맞춰서 정해진 형식대로 SELECT" />
+    <meta property="og:description" content="MYSQL
+SELECT 
+IF 
+DATEFORMATregDated  DATEFORMATNOWd 
+DATEFORMATregDate  HiS  regDate
+FROM article
+
+" />
+    <meta property="og:locale" content="ko_KR" />
+    <meta property="og:image" content="/logoimage/logo.png" />
+    <meta property="og:image:alt" content="blog.hailrain.site" />
+    <meta property="og:image:width" content="486" />
+    <meta property="og:image:height" content="254" />
+    <meta property="og:updated_time" content="2021-01-23T02:20:57" />
+    <meta property="og:pubdate" content="2021-01-23T02:20:57" />
+    <meta property="og:url" content="https://blog.hailrain.site" />
+    <!-- TWITTER -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="MySQL) 날짜 조건에 맞춰서 정해진 형식대로 SELECT" />
+    <meta name="twitter:site" content="@DLOG" />
+    <meta name="twitter:creator" content="@DLOG" />
+    <meta name="twitter:image" content="logoimage/logo.png">
+    <meta name="twitter:description" content="MYSQL
+SELECT 
+IF 
+DATEFORMATregDated  DATEFORMATNOWd 
+DATEFORMATregDate  HiS  regDate
+FROM article
+
+" />
+    <!-- GOOGLE+ -->
+    <meta itemprop="headline" content="DLOG" />
+    <meta itemprop="name" content="DLOG" />
+    <meta itemprop="description" content="MYSQL
+SELECT 
+IF 
+DATEFORMATregDated  DATEFORMATNOWd 
+DATEFORMATregDate  HiS  regDate
+FROM article
+
+" />
+    <meta itemprop="image" content="/logoimage/logo.png" />
+
+    <title>MySQL) 날짜 조건에 맞춰서 정해진 형식대로 SELECT | DLOG | ARTICLE DETAIL</title>
+    
+    <!-- GOOGLE ADSENSE -->
+    <script data-ad-client="ca-pub-1940074004342489" async
+            src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <!-- FONTAWESOME -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <!-- JQUERY -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DLOG</title>
+    
+    <meta name="google-site-verification" content="rn7Tpz7rbqF5Ss3qku9sWvLyaueNYLF-QRe_06ZCNz8" />
+    
+    <link rel="stylesheet" href="app.css">
+
+    
+
+    <link rel="shortcut icon" href="logoimage/favicon.png">
+    <link rel="icon" href="logoimage/favicon.png">
+
+
+</head>
+
+<body id="top">
+ 
+
+        <a class="scrolltop-button" href="#top"><i class="fas fa-arrow-up"></i></a><!-- 하이라이트 라이브러리 추가, 토스트 UI 에디터에서 사용됨 -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.4.1/highlight.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.4.1/styles/default.min.css">
+<!-- 토스트 UI 에디터, 자바스크립트 코어 -->
+<script src="https://uicdn.toast.com/editor/latest/toastui-editor-all.min.js"></script>
+<!-- 코드 미러 라이브러리 추가, 토스트 UI 에디터에서 사용됨 -->
+<link
+rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.48.4/codemirror.min.css"
+/>
+<!-- 토스트 UI 에디터, CSS 코어 -->
+<link rel="stylesheet" href="https://uicdn.toast.com/editor/latest/toastui-editor.min.css" />
+<!-- 토스트 UI 에디터, 신택스 하이라이트 플러그인 추가 -->
+<script
+    src="https://uicdn.toast.com/editor-plugin-code-syntax-highlight/latest/toastui-editor-plugin-code-syntax-highlight.min.js"></script>
+<!-- 디스커스 댓글 기능 추가 -->
+<script id="dsq-count-scr" src="//blogssg.disqus.com/count.js" async></script>
+<!-- lodash 불러오기 -->
+<script
+	src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.20/lodash.min.js"></script>
+
+<!-- vue 불러오기 -->
+<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+
+
+<main class="flex flex-grow-1 flex-dir-col con-min-width">
+ <!-- 상단 메뉴 -->
+ <div class="top-bar flex">
+    <div class="logo_box"><a class="flex flex-ai-c" href="index.html">DLOG</a></div>
+    <div class="flex-grow-1"></div>
+    <div class="menu_bar">
+        <ul class="flex">
+            <li><a href="profile.html">프로필</a></li>
+            <li><a href="">게시판</a>
+                <div class="flex flex-ai-c menu_box_2">
+                    <div class="flex-grow-1"></div>
+                  
+
+                    <ul class="menu_box_2__board">
+                        <li><a href="notice-list.html?board=notice&page=1"><span>공지사항게시판</span></a></li><li><a href="it-list.html?board=it&page=1"><span>IT게시판</span></a></li>
+                          <!--  
+                        <li><a href="notice-list.html">공지사항 게시판</a></li>
+                        <li><a href="">IT 게시판</a></li>
+                        <li><a href="">테스트 게시판</a></li>
+                        -->
+                    </ul>
+
+                </div>
+            </li>
+            <li><a href="statindex.html">통계</a></li>
+        </ul>
+    </div>
+</div>
+
+    <section class="article main-con flex flex-dir-col">
+        <div class="article__title-bar flex flex-jc-s-bet flex-ai-c">
+            <div class="article_id flex-basis-50px">16</div>
+            <div class="article_title flex-grow-1">MySQL) 날짜 조건에 맞춰서 정해진 형식대로 SELECT</div>
+            <div class="article_writer flex-basis-100px"><i class="fas fa-user"></i>이명학
+            </div>
+            <div class="article_regDate flex-basis-200px"><i class="fas fa-clock"></i>2021-01-20 08:43:51
+            </div>
+            <div class="article_hit flex-basis-50px"><i class="fas fa-eye"></i>1</div>
+            <div class="article_recommend flex-basis-50px"><i
+                    class="fas fa-thumbs-up"></i>0</div>
+            <div class="article_comments flex-basis-50px">
+                <i class="fas fa-comment"></i>0
+            </div>    
+        </div>
+        <div id="viewer" class="article_body flex-grow-1">```MYSQL
+SELECT 
+IF (
+DATE_FORMAT(regDate,'%d') = DATE_FORMAT(NOW(),'%d') ,
+DATE_FORMAT(regDate , '%H:%i:%S') , regDate)
+FROM article
+);
+```</div>
+        <div class="article_tags"><a href="article_tag.html?tag=MYSQL&page=1">#MYSQL </a></div>
+        <div id="disqus_thread"></div>
+        <script>
+            var disqus_config = function () {
+				        this.page.url = 'https://blog.hailrain.site/it-detail-16.html';
+				        this.page.identifier = 'it-detail-16.html';
+				    };
+            (function () { // DON'T EDIT BELOW THIS LINE
+                var d = document, s = d.createElement('script');
+                s.src = 'https://blogssg.disqus.com/embed.js';
+                s.setAttribute('data-timestamp', +new Date());
+                (d.head || d.body).appendChild(s);
+            })();
+        </script>
+        <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by
+                Disqus.</a></noscript>
+
+        <div class="article-move-vue article-move-button">
+            <div class="con next-article"><a :href="'article-detail-17.html?board=it&page='+currentPage">다음글</a></div><div class="con next-article"><a :href="'article-detail-15.html?board=it&page='+currentPage">이전글</a></div>
+
+        </div>
+    </section>
+
+    <section class="title-bar">
+        <h1 class="title-bar__title-box flex flex-jc-c"><a href="it-list.html?board=it"><span>IT 게시판</span></a></h1>
+    </section>
+    <section class="article-list-wrap main-con article-list">        
+        <div class="searchBox">
+            <div>
+                <input @input="searchKeywordInputed" :value="searchKeyword" type="text" @keyup="searchKeywordInputedEnter(this)">
+                <button @click="searchKeywordClick"><i class="fas fa-search"></i></button>
+            </div>
+        </div>
+        <section class="board-list">
+            <table class="width-100p">
+                <tr class="tag">
+                    <td class="font-bold cell-id">번호</td>
+                    <td class="font-bold cell-title">제목</td>
+                    <td class="font-bold cell-writer">작성자</td>
+                    <td class="font-bold cell-regDate">작성일</td>
+                    <td class="font-bold cell-hit">조회 수</td>
+                    <td class="font-bold cell-recommend">추천 수</td>
+                </tr>
+                <tbody class="articles_notExists"><tr><td colspan="6">검색 결과가 없습니다.</td></tr></tbody><tbody class="articles_exists" v-for="article in articles"><tr class ="line-separate"><td colspan="6"></td></tr><tr><td class="cell-id">{{article.id}}</td><td class="cell-title"><a :href="'article-detail-'+article.id+'.html?board=it&id='+article.id+'&page='+currentPage">{{article.title}}</a></td><td class="cell-writer">{{article.writer}}</td><td class="cell-regDate">{{article.regDate}}</td><td class="cell-hit">{{article.hitCount}}</td><td class="cell-recommend">{{article.likesCount}}</td></tr></tbody>
+            </table>
+        </section>
+        
+        <div class="main-con flex-grow-1"></div>
+        <section class="page-button">
+
+            <div class="flex flex-ai-c flex-jc-s-bet">
+                <div class="lastmovebutton flex flex-basis-100px">
+                    <div class="movePageFirst flex flex-basis-50px"><span @click="movePageFirst">&lt;&lt;</span></div>
+                    <div class="flex flex-basis-50px"><span class="movePagePrev" @click="movePagePrev">이전</span></div>
+
+                </div>
+                <ul class="flex flex-jc-c flex-ai-e flex-grow-1">
+                    <li v-for="page in pages" class="flex flex-jc-c flex-basis-50px"><span @click="movePage(page)" class="currentPageCheck">{{page}}</span></li>
+                </ul>
+                <div class="firstmovebutton flex flex-basis-100px">
+                    <div class="flex flex-basis-50px"><span class="movePageNext" @click="movePageNext">다음</span></div>
+                    <div class="movePageLast flex flex-basis-50px"><span @click="movePageLast">&gt;&gt;</span></div>
+                </div>
+            </div>
+
+        </section>
+    </section>
+
+
+</main>
+
+<script src="common.js"></script><footer class="bottom-logo-bar con-min-width">
+    <div class="con flex">        
+            <a class="bottom-logo-bar__logo-box" href="index.html" class=""></a>        
+        <div class="copyright-box">
+            <div class="text-box">
+                <p>대전광역시 서구 관저동</p>
+                <p>010-6710-8114</p>
+                <p>cdbitmana@gmail.com</p>
+                <p></br></p>
+                <p>
+                <ul class="flex">
+                    <li><a href="https://cdbitmana.tistory.com/" target="_blank"><i class="fab fa-blogger"></i></a></li>
+                    <li><a href="https://ko-kr.facebook.com/" target="_blank"><i class="fab fa-facebook-square"></i></a>
+                    </li>
+                    <li><a href="https://github.com/cdbitmana/" target="_blank"><i class="fab fa-github-square"></i></a>
+                    </li>
+                    <li><a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a></li>
+                </ul>
+                </p>
+            </div>
+            <span>Copyright, <i class="fas fa-copyright"></i>DLOG All rights reserved.</span>
+        </div>
+    </div>
+
+</footer>
+</div>
+
+
+
+</body>
+
+</html>

@@ -18,8 +18,8 @@
     <meta name="title" content="DLOG" />
     <meta name="keywords" content="HTML, CSS, JAVASCRIPT, JAVA, SPRING, MySQL, 리눅스, 리액트" />
     <meta name="copyright" content="DLOG" />
-    <meta name="pubdate" content="2021-01-16T00:32:07" />
-    <meta name="lastmod" content="2021-01-16T00:32:07" />
+    <meta name="pubdate" content="2021-01-23T02:20:57" />
+    <meta name="lastmod" content="2021-01-23T02:20:57" />
     <!-- OPENGRAPH -->
     <meta property="og:site_name" content="DLOG" />
     <meta property="og:type" content="website" />
@@ -36,8 +36,8 @@ ON 테이블명1컬럼명  테이블명2컬럼명
     <meta property="og:image:alt" content="blog.hailrain.site" />
     <meta property="og:image:width" content="486" />
     <meta property="og:image:height" content="254" />
-    <meta property="og:updated_time" content="2021-01-16T00:32:07" />
-    <meta property="og:pubdate" content="2021-01-16T00:32:07" />
+    <meta property="og:updated_time" content="2021-01-23T02:20:57" />
+    <meta property="og:pubdate" content="2021-01-23T02:20:57" />
     <meta property="og:url" content="https://blog.hailrain.site" />
     <!-- TWITTER -->
     <meta name="twitter:card" content="summary_large_image" />
@@ -90,66 +90,7 @@ ON 테이블명1컬럼명  테이블명2컬럼명
 </head>
 
 <body id="top">
-
-
-    <div class="side-bar flex flex-dir-col">
-        <div class="flex flex-jc-c">
-            <a class="side-bar__logo" href="index.html"></a>
-        </div>
-        <span class="side-bar__menu-button" href=""><i class="fas fa-times-circle"></i></span>
-        <div class="flex flex-jc-c width-100p side-bar__menu-box1">
-            <ul class="width-100p">
-                <li><a class="flex flex-jc-c flex-ai-c height-100p" href="profile.html">PROFILE</a></li>
-                <li><a class="flex flex-jc-c flex-ai-c height-100p" href="">BOARD </a>
-                    <div class="side-bar__menu-box2 width-100p">
-                        <ul class="width-100p">
-                            <li><a href="notice-list.html?board=notice"><span>공지사항게시판</span></a></li><li><a href="it-list.html?board=it"><span>IT게시판</span></a></li>
-                        </ul>
-                    </div>
-                </li>
-                <li><a class="flex flex-jc-c flex-ai-c height-100p" href="statindex.html">STATISTICS</a></li>
-                <li><a class="flex flex-jc-c flex-ai-c height-100p" href="guestbook-list-1.html">GUESTBOOK</a></li>
-            </ul>
-        </div>
-        <div class="flex flex-jc-c width-100p side-bar__menu-box3">
-            <ul class="flex">
-                <li><a href="https://cdbitmana.tistory.com/" target="_blank"><i class="fab fa-blogger"></i></a></li>
-                <li><a href="https://ko-kr.facebook.com/" target="_blank"><i class="fab fa-facebook-square"></i></a>
-                </li>
-                <li><a href="https://github.com/cdbitmana/" target="_blank"><i class="fab fa-github-square"></i></a>
-                </li>
-                <li><a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a></li>
-            </ul>
-        </div>
-    </div>
-
-
-    <div class="container flex flex-dir-col">
-        <div class="wrapper">
-            <header class="flex top-bar con-min-width">
-                <div class="con flex">
-                    <a class="logo-box" href="index.html"></a>
-                    <div class="flex-grow-1"></div>
-                    <div class="flex menu-box1">
-                        <ul class="flex">
-                            <li><a class="height-100p" href="profile.html">PROFILE</a></li>
-                            <li><a class="height-100p" href="">BOARD</a>
-                                <div class="width-100p menu-box2">
-                                    <ul>
-                                        <li><a href="notice-list.html?board=notice"><span>공지사항게시판</span></a></li><li><a href="it-list.html?board=it"><span>IT게시판</span></a></li>
-                                    </ul>
-                                </div>
-                            </li>
-                            <li><a class="flex flex-jc-c flex-ai-c height-100p" href="statindex.html">STATISTICS</a>
-                            </li>
-                            <li><a class="height-100p" href="guestbook-list-1.html">GUESTBOOK</a></li>
-                        </ul>
-                    </div>
-
-                </div>
-                <span class="flex flex-ai-c menu-button" href=""><i class="fas fa-bars"></i></span>
-            </header>
-        </div>
+ 
 
         <a class="scrolltop-button" href="#top"><i class="fas fa-arrow-up"></i></a><!-- 하이라이트 라이브러리 추가, 토스트 UI 에디터에서 사용됨 -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.4.1/highlight.min.js"></script>
@@ -177,7 +118,33 @@ href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.48.4/codemirror.min.cs
 
 
 <main class="flex flex-grow-1 flex-dir-col con-min-width">
+ <!-- 상단 메뉴 -->
+ <div class="top-bar flex">
+    <div class="logo_box"><a class="flex flex-ai-c" href="index.html">DLOG</a></div>
+    <div class="flex-grow-1"></div>
+    <div class="menu_bar">
+        <ul class="flex">
+            <li><a href="profile.html">프로필</a></li>
+            <li><a href="">게시판</a>
+                <div class="flex flex-ai-c menu_box_2">
+                    <div class="flex-grow-1"></div>
+                  
 
+                    <ul class="menu_box_2__board">
+                        <li><a href="notice-list.html?board=notice&page=1"><span>공지사항게시판</span></a></li><li><a href="it-list.html?board=it&page=1"><span>IT게시판</span></a></li>
+                          <!--  
+                        <li><a href="notice-list.html">공지사항 게시판</a></li>
+                        <li><a href="">IT 게시판</a></li>
+                        <li><a href="">테스트 게시판</a></li>
+                        -->
+                    </ul>
+
+                </div>
+            </li>
+            <li><a href="statindex.html">통계</a></li>
+        </ul>
+    </div>
+</div>
 
     <section class="article main-con flex flex-dir-col">
         <div class="article__title-bar flex flex-jc-s-bet flex-ai-c">
@@ -201,7 +168,7 @@ INNER JOIN 테이블명2
 ON 테이블명1.컬럼명 = 테이블명2.컬럼명;
 ```
 테이블명1.컬럼과 테이블명2.컬럼의 값이 같은 것들만 합쳐져 나온다.</div>
-        <div class="article_tags"><a href="article_tag.html?tag=MYSQL">#MYSQL </a></div>
+        <div class="article_tags"><a href="article_tag.html?tag=MYSQL&page=1">#MYSQL </a></div>
         <div id="disqus_thread"></div>
         <script>
             var disqus_config = function () {
@@ -218,8 +185,8 @@ ON 테이블명1.컬럼명 = 테이블명2.컬럼명;
         <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by
                 Disqus.</a></noscript>
 
-        <div class="article-move-button">
-            <div class="con next-article"><a href="article-detail-5.html">다음글</a></div><div class="con next-article"><a href="article-detail-3.html">이전글</a></div>
+        <div class="article-move-vue article-move-button">
+            <div class="con next-article"><a :href="'article-detail-5.html?board=it&page='+currentPage">다음글</a></div><div class="con next-article"><a :href="'article-detail-3.html?board=it&page='+currentPage">이전글</a></div>
 
         </div>
     </section>
@@ -244,7 +211,7 @@ ON 테이블명1.컬럼명 = 테이블명2.컬럼명;
                     <td class="font-bold cell-hit">조회 수</td>
                     <td class="font-bold cell-recommend">추천 수</td>
                 </tr>
-                <tbody class="articles_notExists"><tr><td colspan="6">검색 결과가 없습니다.</td></tr></tbody><tbody class="articles_exists" v-for="article in articles"><tr class ="line-separate"><td colspan="6"></td></tr><tr><td class="cell-id">{{article.id}}</td><td class="cell-title"><a :href="'article-detail-'+article.id+'.html?board=it&id='+article.id">{{article.title}}</a></td><td class="cell-writer">{{article.writer}}</td><td class="cell-regDate">{{article.regDate}}</td><td class="cell-hit">{{article.hitCount}}</td><td class="cell-recommend">{{article.likesCount}}</td></tr></tbody>
+                <tbody class="articles_notExists"><tr><td colspan="6">검색 결과가 없습니다.</td></tr></tbody><tbody class="articles_exists" v-for="article in articles"><tr class ="line-separate"><td colspan="6"></td></tr><tr><td class="cell-id">{{article.id}}</td><td class="cell-title"><a :href="'article-detail-'+article.id+'.html?board=it&id='+article.id+'&page='+currentPage">{{article.title}}</a></td><td class="cell-writer">{{article.writer}}</td><td class="cell-regDate">{{article.regDate}}</td><td class="cell-hit">{{article.hitCount}}</td><td class="cell-recommend">{{article.likesCount}}</td></tr></tbody>
             </table>
         </section>
         
