@@ -14,7 +14,7 @@
     <!-- 메타태그정보 //-->
     <!-- META -->
     <link rel="canonical" href="https://blog.hailrain.site" />
-    <meta name="subject" content="JAVASCRIPT) 자바스크립트에서 쿼리스트링 파라미터값 가져오기" />
+    <meta name="subject" content="MySQL) IFNULL" />
     <meta name="title" content="DLOG" />
     <meta name="keywords" content="HTML, CSS, JAVASCRIPT, JAVA, SPRING, MySQL, 리눅스, 리액트" />
     <meta name="copyright" content="DLOG" />
@@ -23,17 +23,14 @@
     <!-- OPENGRAPH -->
     <meta property="og:site_name" content="DLOG" />
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="JAVASCRIPT) 자바스크립트에서 쿼리스트링 파라미터값 가져오기" />
-    <meta property="og:description" content=" 자바스크립트에서 쿼리스트링 값 파라미터 가져오기
-javascript
-function getUrlParams 
-    var params  
-    var param  decodeURIwindowlocationsearch
-    paramreplacegi functionstr key value  paramskey  value     
-    return params
+    <meta property="og:title" content="MySQL) IFNULL" />
+    <meta property="og:description" content=" IFNULL
+ IFNULL은 해당 필드의 값이 NULL일 때 다른 값을 반환하도록 한다
 
+mysql
+SELECT IFNULLid  0 FROM article
 
- 리턴되는 params의 키로 값을 가져올 수 있다" />
+id컬럼의 값이 NULL이 아니면 id를 출력하고 NULL이면 0을 출력한다" />
     <meta property="og:locale" content="ko_KR" />
     <meta property="og:image" content="/logoimage/logo.png" />
     <meta property="og:image:alt" content="blog.hailrain.site" />
@@ -44,36 +41,30 @@ function getUrlParams
     <meta property="og:url" content="https://blog.hailrain.site" />
     <!-- TWITTER -->
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="JAVASCRIPT) 자바스크립트에서 쿼리스트링 파라미터값 가져오기" />
+    <meta name="twitter:title" content="MySQL) IFNULL" />
     <meta name="twitter:site" content="@DLOG" />
     <meta name="twitter:creator" content="@DLOG" />
     <meta name="twitter:image" content="logoimage/logo.png">
-    <meta name="twitter:description" content=" 자바스크립트에서 쿼리스트링 값 파라미터 가져오기
-javascript
-function getUrlParams 
-    var params  
-    var param  decodeURIwindowlocationsearch
-    paramreplacegi functionstr key value  paramskey  value     
-    return params
+    <meta name="twitter:description" content=" IFNULL
+ IFNULL은 해당 필드의 값이 NULL일 때 다른 값을 반환하도록 한다
 
+mysql
+SELECT IFNULLid  0 FROM article
 
- 리턴되는 params의 키로 값을 가져올 수 있다" />
+id컬럼의 값이 NULL이 아니면 id를 출력하고 NULL이면 0을 출력한다" />
     <!-- GOOGLE+ -->
     <meta itemprop="headline" content="DLOG" />
     <meta itemprop="name" content="DLOG" />
-    <meta itemprop="description" content=" 자바스크립트에서 쿼리스트링 값 파라미터 가져오기
-javascript
-function getUrlParams 
-    var params  
-    var param  decodeURIwindowlocationsearch
-    paramreplacegi functionstr key value  paramskey  value     
-    return params
+    <meta itemprop="description" content=" IFNULL
+ IFNULL은 해당 필드의 값이 NULL일 때 다른 값을 반환하도록 한다
 
+mysql
+SELECT IFNULLid  0 FROM article
 
- 리턴되는 params의 키로 값을 가져올 수 있다" />
+id컬럼의 값이 NULL이 아니면 id를 출력하고 NULL이면 0을 출력한다" />
     <meta itemprop="image" content="/logoimage/logo.png" />
 
-    <title>JAVASCRIPT) 자바스크립트에서 쿼리스트링 파라미터값 가져오기 | DLOG | ARTICLE DETAIL</title>
+    <title>MySQL) IFNULL | DLOG | ARTICLE DETAIL</title>
     
     <!-- GOOGLE ADSENSE -->
     <script data-ad-client="ca-pub-1940074004342489" async
@@ -157,11 +148,11 @@ href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.48.4/codemirror.min.cs
 
     <section class="article main-con flex flex-dir-col">
         <div class="article__title-bar flex flex-jc-s-bet flex-ai-c">
-            <div class="article_id flex-basis-50px">19</div>
-            <div class="article_title flex-grow-1">JAVASCRIPT) 자바스크립트에서 쿼리스트링 파라미터값 가져오기</div>
+            <div class="article_id flex-basis-50px">21</div>
+            <div class="article_title flex-grow-1">MySQL) IFNULL</div>
             <div class="article_writer flex-basis-100px"><i class="fas fa-user"></i>이명학
             </div>
-            <div class="article_regDate flex-basis-200px"><i class="fas fa-clock"></i>2021-01-28 17:53:47
+            <div class="article_regDate flex-basis-200px"><i class="fas fa-clock"></i>2021-02-08 19:47:31
             </div>
             <div class="article_hit flex-basis-50px"><i class="fas fa-eye"></i>1</div>
             <div class="article_recommend flex-basis-50px"><i
@@ -170,22 +161,19 @@ href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.48.4/codemirror.min.cs
                 <i class="fas fa-comment"></i>0
             </div>    
         </div>
-        <div id="viewer" class="article_body flex-grow-1"># 자바스크립트에서 쿼리스트링 값 파라미터 가져오기
-```javascript
-function getUrlParams() {
-    var params = {};
-    var param = decodeURI(window.location.search);
-    param.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(str, key, value) { params[key] = value; });    
-    return params;
-}
+        <div id="viewer" class="article_body flex-grow-1"># IFNULL
+## IFNULL은 해당 필드의 값이 NULL일 때 다른 값을 반환하도록 한다.
+
+```mysql
+SELECT IFNULL(id , 0) FROM article;
 ```
-- 리턴되는 params의 키로 값을 가져올 수 있다.</div>
+id컬럼의 값이 NULL이 아니면 id를 출력하고 NULL이면 0을 출력한다.</div>
         <div class="article_tags"></div>
         <div id="disqus_thread"></div>
         <script>
             var disqus_config = function () {
-				        this.page.url = 'https://blog.hailrain.site/it-detail-19.html';
-				        this.page.identifier = 'it-detail-19.html';
+				        this.page.url = 'https://blog.hailrain.site/it-detail-21.html';
+				        this.page.identifier = 'it-detail-21.html';
 				    };
             (function () { // DON'T EDIT BELOW THIS LINE
                 var d = document, s = d.createElement('script');
@@ -198,7 +186,7 @@ function getUrlParams() {
                 Disqus.</a></noscript>
 
         <div class="article-move-vue article-move-button">
-            <div class="con next-article"><a :href="'article-detail-20.html?board=it&page='+currentPage">다음글</a></div><div class="con next-article"><a :href="'article-detail-18.html?board=it&page='+currentPage">이전글</a></div>
+            <div class="con next-article"><a :href="'article-detail-20.html?board=it&page='+currentPage">이전글</a></div>
 
         </div>
     </section>
